@@ -1,11 +1,14 @@
 <?php
 $basePath = $_SERVER['DOCUMENT_ROOT'];
-$lang = 'es';
-$langURL = $lang == 'en' ? 'en/' : '';
 $salesRep = $_GET['ref'];
 $salesRef = $salesRep == null ? '': "?ref=$salesRep";
+$lang = $_COOKIE['prefLang'];
 
-include "$basePath/assets/country-redirect.php";
+if (!isset($_COOKIE['prefLang'])) {
+  $lang = 'en';
+  setcookie('prefLang', $lang, time() + 3600 * 24 * 365, '/');
+}
+
 include "$basePath/common/contact-data.php";
 include "$basePath/assets/trans/index.php";
 ?>
@@ -17,7 +20,7 @@ include "$basePath/assets/trans/index.php";
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta http-equiv="content-language" content="<?php echo $lang ?>">
-  <link rel="canonical" href="https://www.tagac.com.mx/<?php echo $langURL ?>">
+  <link rel="canonical" href="https://www.usa-tagac.com/">
 
   <!-- Definiciones de la página y SEO -->
   <title>
@@ -30,25 +33,25 @@ include "$basePath/assets/trans/index.php";
     "@type": "LocalBusiness",
     "name": "TAGAC",
     "description": "<?php echo $seoDesc[$lang] ?>",
-    "url": "https://www.tagac.com.mx/",
+    "url": "https://www.usa-tagac.com/",
     "image": "",
-    "logo": "https://www.tagac.com.mx/assets/img/brand/logo.png",
-    "email": ""<?php echo $dataEmail[$lang] ?>",
-    "telephone": ""<?php echo $dataPhone[$lang] ?>",
+    "logo": "https://www.usa-tagac.com/assets/img/brand/logo.png",
+    "email": ""<?php echo $dataEmail ?>",
+    "telephone": ""<?php echo $dataPhone ?>",
     "openingHours" : "Mo-Fr 08:00-18:00, Sa 08:00-14:00",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": ""<?php echo $streetAddress[$lang] ?>",
-      "addressLocality": ""<?php echo $addressLocality[$lang] ?>",
-      "addressRegion": ""<?php echo $addressRegion[$lang] ?>",
-      "postalCode": ""<?php echo $postalCode[$lang] ?>",
-      "addressCountry": ""<?php echo $addressCountry[$lang] ?>"
+      "streetAddress": ""<?php echo $streetAddress ?>",
+      "addressLocality": ""<?php echo $addressLocality ?>",
+      "addressRegion": ""<?php echo $addressRegion ?>",
+      "postalCode": ""<?php echo $postalCode ?>",
+      "addressCountry": ""<?php echo $addressCountry ?>"
     }
   }
   </script>
 
   <!-- Hoja de estilo -->
-  <link href="https://www.tagac.com.mx/assets/css/main.css" rel="stylesheet">
+  <link href="https://www.usa-tagac.com/assets/css/main.css" rel="stylesheet">
 
   <!-- Etiquetas y scripts comunes -->
   <?php include "$basePath/common/head-section.php"; ?>
@@ -99,7 +102,7 @@ include "$basePath/assets/trans/index.php";
         </div>
         <div class="row gy-4">
           <div class="col-lg-5 position-relative edif-img" data-aos="fade-up" data-aos-delay="150"
-            style="background-image: url(https://www.tagac.com.mx/<?php echo $edifImg[$lang] ?>); background-position: right; background-repeat: no-repeat; background-size: cover;">
+            style="background-image: url(https://www.usa-tagac.com/<?php echo $edifImg[$lang] ?>); background-position: right; background-repeat: no-repeat; background-size: cover;">
           </div>
           <div class="col-lg-7 d-flex align-items-end" data-aos="fade-up" data-aos-delay="300">
             <div class="content ps-0 ps-lg-5">
@@ -128,14 +131,14 @@ include "$basePath/assets/trans/index.php";
 
         <div class="row gy-4">
           <div class="col-lg-5 position-relative about-img"
-            style="background-image: url(https://www.tagac.com.mx/<?php echo $aboutImg[$lang] ?>) ; background-position: center; background-repeat: no-repeat; background-size: cover;"
+            style="background-image: url(https://www.usa-tagac.com/<?php echo $aboutImg[$lang] ?>) ; background-position: center; background-repeat: no-repeat; background-size: cover;"
             data-aos="fade-up" data-aos-delay="150">
             <div class="call-us position-absolute">
               <h4>
                 <?php echo $aboutCTA[$lang] ?>
               </h4>
               <p>
-                <?php echo $aboutPhone[$lang] ?>
+                <?php echo $dataPhoneStr ?>
               </p>
             </div>
           </div>
@@ -185,7 +188,7 @@ include "$basePath/assets/trans/index.php";
           <div class="swiper-wrapper">
             <?php foreach ($products[$lang] as $item): ?>
               <div class="swiper-slide item d-flex flex-column justify-content-end"
-                style="background-image: url(https://www.tagac.com.mx/<?php echo $item['img'] ?>)">
+                style="background-image: url(https://www.usa-tagac.com/<?php echo $item['img'] ?>)">
                 <h3>
                   <?php echo $item['title'] ?>
                 </h3>
@@ -259,7 +262,7 @@ include "$basePath/assets/trans/index.php";
           </div>
 
           <div class="row">
-            <img src="https://www.tagac.com.mx/<?php echo $shipImg[$lang] ?>" class="col-lg-8"
+            <img src="https://www.usa-tagac.com/<?php echo $shipImg[$lang] ?>" class="col-lg-8"
               alt="<?php echo $shipImgAlt[$lang] ?>">
             <?php echo $shipPoints[$lang] ?>
           </div>
@@ -287,7 +290,7 @@ include "$basePath/assets/trans/index.php";
                 <h3>
                   <?php echo $contPhone[$lang] ?>
                 </h3>
-                <a id="phone-contact" href="tel:<?php echo $dataPhone[$lang] ?>"><?php echo $dataPhoneStr[$lang] ?></a>
+                <a id="phone-contact" href="tel:<?php echo $dataPhone ?>"><?php echo $dataPhoneStr ?></a>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -299,7 +302,7 @@ include "$basePath/assets/trans/index.php";
                 <h3>
                   <?php echo $contEmail[$lang] ?>
                 </h3>
-                <a id="email-contact" href="mailto:<?php echo $dataEmail[$lang] ?>"><?php echo $dataEmail[$lang] ?></a>
+                <a id="email-contact" href="mailto:<?php echo $dataEmail ?>"><?php echo $dataEmail ?></a>
               </div>
             </div>
           </div><!-- End Info Item -->
@@ -309,10 +312,10 @@ include "$basePath/assets/trans/index.php";
               <i class="icon bi bi-map flex-shrink-0"></i>
               <div>
                 <h3>
-                  <?php echo $contAddress[$lang] ?>
+                  <?php echo $contAddress ?>
                 </h3>
                 <p>
-                  <?php echo $dataAddress[$lang] ?><br>
+                  <?php echo $dataAddress ?><br>
                 </p>
               </div>
             </div>
@@ -323,10 +326,10 @@ include "$basePath/assets/trans/index.php";
               <i class="icon bi bi-share flex-shrink-0"></i>
               <div>
                 <h3>
-                  <?php echo $contHours[$lang] ?>
+                  <?php echo $contHours ?>
                 </h3>
                 <div>
-                  <?php echo $dataHours[$lang] ?>
+                  <?php echo $dataHours ?>
                 </div>
               </div>
             </div>
@@ -346,7 +349,7 @@ include "$basePath/assets/trans/index.php";
   <?php include "$basePath/common/scripts.php"; ?>
 
   <!-- Script específico de la página -->
-  <script src="https://www.tagac.com.mx/assets/js/main.js"></script>
+  <script src="https://www.usa-tagac.com/assets/js/main.js"></script>
 
 </body>
 

@@ -8,7 +8,7 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <a href="/<?php echo $langURL.$salesRef ?>" class="logo d-flex align-items-center me-auto me-lg-0">
-        <img src="https://www.tagac.com.mx/assets/img/brand/logo.png" class="img-fluid" alt="">
+        <img src="https://www.usa-tagac.com/assets/img/brand/logo.png" class="img-fluid" alt="">
       </a>
 
       <nav id="navbar" class="navbar">
@@ -43,14 +43,14 @@
         <div class="dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
             aria-expanded="false">
-            <?php echo $prefCountry ?>
+            <?php echo $lang=='en'? 'English' : 'Español' ?>
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
-              <a id="ver-us" class="dropdown-item" href="/en/<?php echo $salesRef ?>">US</a>
+              <a id="ver-us" class="dropdown-item" href="/<?php echo $salesRef ?>">English</a>
             </li>
             <li>
-              <a id="ver-mx" class="dropdown-item" href="/<?php echo $salesRef ?>">MX</a>
+              <a id="ver-mx" class="dropdown-item" href="/<?php echo $salesRef ?>">Español</a>
             </li>
           </ul>
         </div>

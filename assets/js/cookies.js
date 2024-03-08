@@ -10,12 +10,12 @@ function setCookie(name, value, days) {
 
 $('#ver-us').click(function (e) {
     e.preventDefault();
-    setCookie("prefCountry", "US", 365);
+    setCookie("prefLang", "en", 365);
     window.location.href = e.target.href;
 });
 
 $('#ver-mx').click(function (e) {
     e.preventDefault();
-    setCookie("prefCountry", "MX", 365);
+    setCookie("prefLang", "es", 365);
     window.location.href = e.target.href;
 });

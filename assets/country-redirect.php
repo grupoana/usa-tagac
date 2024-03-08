@@ -6,19 +6,19 @@ $geoplugin->locate();
 
 $countryCode = $geoplugin->countryCode;
 
-if (!isset($_COOKIE['prefCountry'])) {
-    setcookie('prefCountry', $countryCode, time() + 3600 * 24 * 365, '/');
+if (!isset($_COOKIE['prefLang'])) {
+    setcookie('prefLang', $countryCode, time() + 3600 * 24 * 365, '/');
 }
 
-$prefCountry = $_COOKIE['prefCountry'];
+$prefLang = $_COOKIE['prefLang'];
 
-    if (($prefCountry == 'US') && ($lang == 'es')) {
+    if (($prefLang == 'US') && ($lang == 'es')) {
         header("Location: https://www.tagac.com.mx/en/$salesRef");
         exit();
-    } else if (($prefCountry == 'MX') && ($lang == 'en')) {
+    } else if (($prefLang == 'MX') && ($lang == 'en')) {
         header("Location: https://www.tagac.com.mx/$salesRef");
         exit();
-    } else  if (($prefCountry != 'MX') && ($prefCountry != 'US')){
+    } else  if (($prefLang != 'MX') && ($prefLang != 'US')){
         header("Location: https://www.tagac.com.mx/$salesRef");
         exit();
     }

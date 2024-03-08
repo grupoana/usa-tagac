@@ -1,7 +1,7 @@
 
   <!-- brand/favicons -->
-  <link href="https://www.tagac.com.mx/assets/img/brand/favicon.png" rel="icon">
-  <link href="https://www.tagac.com.mx/assets/img/brand/apple-touch-icon.png" rel="brand/apple-touch-icon">
+  <link href="https://www.usa-tagac.com/assets/img/brand/favicon.png" rel="icon">
+  <link href="https://www.usa-tagac.com/assets/img/brand/apple-touch-icon.png" rel="brand/apple-touch-icon">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,11 +11,11 @@
     rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="https://www.tagac.com.mx/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://www.tagac.com.mx/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="https://www.tagac.com.mx/assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="https://www.tagac.com.mx/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="https://www.tagac.com.mx/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="https://www.usa-tagac.com/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://www.usa-tagac.com/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://www.usa-tagac.com/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="https://www.usa-tagac.com/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://www.usa-tagac.com/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Google Tag Manager -->
   <script>(function (w, d, s, l, i) {
