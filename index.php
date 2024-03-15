@@ -312,7 +312,7 @@ include "$basePath/assets/trans/index.php";
               <i class="icon bi bi-map flex-shrink-0"></i>
               <div>
                 <h3>
-                  <?php echo $contAddress ?>
+                  <?php echo $contAddress[$lang] ?>
                 </h3>
                 <p>
                   <?php echo $dataAddress ?><br>
@@ -326,7 +326,7 @@ include "$basePath/assets/trans/index.php";
               <i class="icon bi bi-share flex-shrink-0"></i>
               <div>
                 <h3>
-                  <?php echo $contHours ?>
+                  <?php echo $contHours[$lang] ?>
                 </h3>
                 <div>
                   <?php echo $dataHours ?>
