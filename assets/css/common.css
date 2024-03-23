@@ -47,6 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-button:hover {
+  color: #fff;
   background: rgba(18, 143, 206, 0.8);
   box-shadow: 0 8px 28px rgba(43, 18, 206, 0.45);
 }

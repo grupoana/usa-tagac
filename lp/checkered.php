@@ -93,7 +93,7 @@ include "$basePath/common/contact-data.php";
       </div>
     </div>
     <div class="col-12 cta-div">
-      <button class="cta-button shake"><?php echo $cta[$lang] ?></button>
+    <a class="cta-button shake" href="#<?php echo $ctaId[$lang] ?>"><?php echo $cta[$lang] ?></a>
     </div>
   </section>
 
@@ -116,7 +116,7 @@ include "$basePath/common/contact-data.php";
       <p></p>
     </div>
     <div class="col-12 cta-div">
-      <button class="cta-button shake"><?php echo $cta[$lang] ?></button>
+      <a class="cta-button shake" href="#<?php echo $ctaId[$lang] ?>"><?php echo $cta[$lang] ?></a>
     </div>
   </section>
 

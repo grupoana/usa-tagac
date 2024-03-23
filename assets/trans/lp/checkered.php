@@ -24,6 +24,9 @@ $descSub['en'][1] = 'All our paper sheets are food grade. That means your food w
 $descTitle['en'][2] = 'Keep grease stains off your paper';
 $descSub['en'][2] = 'Our paper solutions are specifically designed to be highly resistant to oils and vegetable fats. No more soggy paper wrapping your food.';
 
+// Call to Action
+$ctaId['en'] = 'contact';
+
 /************************************************************
     Texto en Inglés
 ************************************************************/
