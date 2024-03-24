@@ -71,14 +71,14 @@ include "$basePath/common/contact-data.php";
           <p><?php echo $descSub[$lang][1] ?></p>
         </div>
       </div>
-      <div class="picture col-md-6">
+      <div class="picture col-md-6" data-aos="fade-left">
         <img class="img-bg" src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-1a.jpg" alt="safe paper for wrapping food">
         <img class="img-md" src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-1b.jpg" alt="safe paper for wrapping food">
         <img class="img-sm" src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-1c.jpg" alt="safe paper for wrapping food">
       </div>
     </div>
     <div class="row item odd even">
-      <div class="picture col-md-7">
+      <div class="picture col-md-7" data-aos="fade-right" data-aos-offset="200">
         <img class="img-bg" src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-2a.jpg" alt="safe paper for wrapping food">
         <img class="img-md" src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-2b.jpg" alt="safe paper for wrapping food">
       </div>
@@ -88,8 +88,34 @@ include "$basePath/common/contact-data.php";
           <p><?php echo $descSub[$lang][2] ?></p>
         </div>
       </div>
-      <div class="picture img-sm col-12">
+      <div class="picture img-sm col-12" data-aos="fade-right">
         <img src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-2c.webp" alt="safe paper for wrapping food">
+      </div>
+    </div>
+    <div class="row item odd">
+      <div class="text first-div col-md-5">
+        <div class="header">
+          <h2><?php echo $descTitle[$lang][3] ?></h2>
+          <p><?php echo $descSub[$lang][3] ?></p>
+        </div>
+      </div>
+      <div class="picture col-md-7" data-aos="fade-left">
+        <img src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-3.avif" alt="safe paper for wrapping food">
+      </div>
+    </div>
+    <div class="row item even">
+      <div class="picture col-md-7" data-aos="fade-right" data-aos-offset="200">
+        <img class="img-bg" src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-4a.jpg" alt="safe paper for wrapping food">
+        <img class="img-md" src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-4b.jpg" alt="safe paper for wrapping food">
+      </div>
+      <div class="text first-div col-md-5">
+        <div class="header">
+          <h2><?php echo $descTitle[$lang][4] ?></h2>
+          <p><?php echo $descSub[$lang][4] ?></p>
+        </div>
+      </div>
+      <div class="picture img-sm col-12" data-aos="fade-right">
+        <img src="https://www.usa-tagac.com/assets/img/lp/checkered/desc-4c.jpg" alt="safe paper for wrapping food">
       </div>
     </div>
     <div class="col-12 cta-div">
@@ -97,28 +123,31 @@ include "$basePath/common/contact-data.php";
     </div>
   </section>
 
+  <div class="separator-top"></div>
+
   <!-------------------- Product offer ------------------------>
-  <section id="<?php echo $prodId[$lang] ?>" class="row">
+  <section id="<?php echo $prodId[$lang] ?>" class="row offer">
     <div class="header">
-      <h2></h2>
-      <p></p>
+      <h2><?php echo $ofrTitle[$lang] ?></h2>
     </div>
-    <div class="col-md-6">
-      <img src="">
-      <p></p>
+    <div class="col-lg-5 col-md-6 content">
+      <p><?php echo $ofrSub[$lang] ?></p>
+      <div class="cta-div cta-inner">
+        <a class="cta-button shake" href="#<?php echo $ctaId[$lang] ?>"><?php echo $cta[$lang] ?></a>
+      </div>
     </div>
-    <div class="col-md-6">
-      <img src="">
-      <p></p>
-    </div>
-    <div class="col-md-6 offset-md-3">
-      <h3></h3>
-      <p></p>
-    </div>
-    <div class="col-12 cta-div">
-      <a class="cta-button shake" href="#<?php echo $ctaId[$lang] ?>"><?php echo $cta[$lang] ?></a>
+    <div class="col-lg-7 col-md-6 picture-container">
+      <div class="row picture-top" data-aos="zoom-in">
+        <img src="https://www.usa-tagac.com/assets/img/lp/checkered/offer1.jpg">
+      </div>
+      <div class="row space"></div>
+      <div class="row picture-bottom" data-aos="zoom-in" data-aos-offset="400">
+        <img src="https://www.usa-tagac.com/assets/img/lp/checkered/offer2.jpg">
+      </div>
     </div>
   </section>
+
+  <div class="separator-bottom"></div>
 
   <!----------------------- About Us -------------------------->
   <section id="<?php echo $aboutId[$lang] ?>" class="row">
@@ -148,7 +177,7 @@ include "$basePath/common/contact-data.php";
   <script src="https://www.usa-tagac.com/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="https://www.usa-tagac.com/assets/vendor/aos/aos.js"></script>
   <script>
-    AOS.init({duration: 300, easing: 'ease-in-out', once: true, mirror: false});
+    AOS.init({duration: 300, easing: 'ease-in-out', mirror: false});
   </script>
   <script>
     !function(f,b,e,v,n,t,s) {
