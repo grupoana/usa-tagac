@@ -1,6 +1,6 @@
 
   <!-- brand/favicons -->
-  <link href="https://www.usa-tagac.com/assets/img/brand/favicon.png" rel="icon">
+  <link href="https://www.usa-tagac.com/assets/img/brand/logo.png" rel="icon">
   <link href="https://www.usa-tagac.com/assets/img/brand/apple-touch-icon.png" rel="brand/apple-touch-icon">
 
   <!-- Google Fonts -->

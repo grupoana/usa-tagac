@@ -6,7 +6,7 @@
 
 $dataPhone = '9565304856';
 $dataPhoneStr = '(956) 530-4856';
-$dataWhatsapp = '19565304856'; // message/X7LBKXAUPZLZH1
+$dataWhatsapp = 'https://wa.me/message/FVBJQOJUGGMSM1';
 $dataEmail = 'sales@usa-tagac.com';
 
 $streetAddress = '801 Bona Terra Dr SUITE 190';
