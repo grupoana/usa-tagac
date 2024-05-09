@@ -4,9 +4,9 @@
  * Datos de contacto
 **************************************************************/
 
-$dataPhone = '9565304856';
-$dataPhoneStr = '(956) 530-4856';
-$dataWhatsapp = 'https://wa.me/message/FVBJQOJUGGMSM1';
+$dataPhone = '254-358-4561';
+$dataPhoneStr = '(254) 358-4561';
+$dataWhatsapp = 'https://wa.me/message/EYMU4U4AMUCJG1';
 $dataEmail = 'sales@usa-tagac.com';
 
 $streetAddress = '801 Bona Terra Dr SUITE 190';
